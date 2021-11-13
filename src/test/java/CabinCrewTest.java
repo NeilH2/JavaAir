@@ -9,7 +9,7 @@ public class CabinCrewTest {
 
     @Before
     public void before(){
-        cabinCrew = new CabinCrew(CabinCrewType.DOUBLE);
+        cabinCrew = new CabinCrew(CabinCrewType.DOUBLE, "James");
     }
 
     @Test
@@ -20,6 +20,11 @@ public class CabinCrewTest {
     @Test
     public void doubleHasValueFirstOfficer(){
         assertEquals("First Officer", cabinCrew.getValueFromEnum());
+    }
+
+    @Test
+    public void crewMemberHasName(){
+        assertEquals("James", cabinCrew.getCrewMemberName());
     }
 
 }

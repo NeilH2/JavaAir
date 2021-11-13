@@ -1,9 +1,14 @@
+import java.util.SplittableRandom;
+
 public class CabinCrew {
 
     private CabinCrewType cabinCrewType;
+    private String name;
 
-    public CabinCrew(CabinCrewType cabinCrewType) {
+
+    public CabinCrew(CabinCrewType cabinCrewType, String name) {
         this.cabinCrewType = cabinCrewType;
+        this.name = name;
     }
 
     public CabinCrewType getCabinCrewType(){
@@ -14,4 +19,7 @@ public class CabinCrew {
         return this.cabinCrewType.getValue();
     }
 
+    public String getCrewMemberName() {
+        return name;
+    }
 }
