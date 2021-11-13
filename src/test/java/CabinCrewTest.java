@@ -19,7 +19,7 @@ public class CabinCrewTest {
 
     @Test
     public void doubleHasValueFirstOfficer(){
-        assertEquals("First Officer", cabinCrew.getValueFromEnum());
+        assertEquals("First Officer", cabinCrew.getRank());
     }
 
     @Test
