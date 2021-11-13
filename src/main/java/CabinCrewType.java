@@ -6,14 +6,14 @@ public enum CabinCrewType {
     FAMILY("Flight Attendant");
 
 
-    private final String  value;
+    private final String  rank;
 
-    CabinCrewType(String value) {
-        this.value = value;
+    CabinCrewType(String rank) {
+        this.rank = rank;
     }
 
-    public String getValue() {
-        return value;
+    public String getRank() {
+        return rank;
     }
 
 

@@ -5,26 +5,50 @@ import static org.junit.Assert.assertEquals;
 
 public class CabinCrewTest {
 
-    CabinCrew cabinCrew;
+    CabinCrew cabinCrewSingle;
+    CabinCrew cabinCrewDouble;
+    CabinCrew cabinCrewTriple;
+    CabinCrew cabinCrewFamily;
 
     @Before
     public void before(){
-        cabinCrew = new CabinCrew(CabinCrewType.DOUBLE, "James");
-    }
+        cabinCrewSingle = new CabinCrew(CabinCrewType.SINGLE, "Dave");
+        cabinCrewDouble = new CabinCrew(CabinCrewType.DOUBLE, "James");
+        cabinCrewTriple = new CabinCrew(CabinCrewType.TRIPLE, "Sandra");
+        cabinCrewFamily = new CabinCrew(CabinCrewType.FAMILY, "Betty");
 
-    @Test
-    public void canGetCabinCrewType(){
-        assertEquals(CabinCrewType.DOUBLE, cabinCrew.getCabinCrewType());
-    }
-
-    @Test
-    public void doubleHasValueFirstOfficer(){
-        assertEquals("First Officer", cabinCrew.getValueFromEnum());
     }
 
     @Test
     public void crewMemberHasName(){
-        assertEquals("James", cabinCrew.getCrewMemberName());
+        assertEquals("Dave", cabinCrewSingle.getCrewMemberName());
+    }
+
+    @Test
+    public void canGetCabinCrewType(){
+        assertEquals(CabinCrewType.SINGLE, cabinCrewSingle.getCabinCrewType());
+    }
+
+    @Test
+    public void singleHasRankCaptain(){
+        assertEquals("Captain", cabinCrewSingle.getRank());
+    }
+
+    @Test
+    public void doubleHasRankFirstOfficer(){
+        assertEquals("First Officer", cabinCrewDouble.getRank());
+    }
+
+
+    @Test
+    public void tripleHasRankPurser(){
+        assertEquals("Purser", cabinCrewTriple.getRank());
+    }
+
+    @Test
+    public void familyHasRankFlightAttendant(){
+        assertEquals("Flight Attendant", cabinCrewFamily.getRank());
+
     }
 
 }

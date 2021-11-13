@@ -1,4 +1,4 @@
-import java.util.SplittableRandom;
+
 
 public class CabinCrew {
 
@@ -15,8 +15,8 @@ public class CabinCrew {
         return this.cabinCrewType;
     }
 
-    public String getValueFromEnum() { //ADDED METHOD
-        return this.cabinCrewType.getValue();
+    public String getRank() {
+        return this.cabinCrewType.getRank();
     }
 
     public String getCrewMemberName() {
